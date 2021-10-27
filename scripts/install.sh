@@ -4,8 +4,7 @@
 
 sudo add-apt-repository ppa:gns3/ppa -y
 sudo apt-update
-export DEBIAN_FRONTEND=noninteractive
-sudo apt install gns3-gui  -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -q gns3-server gns3-gui
 
 # Introseite (= README dieses Repository)
 bash -x /opt/lernmaas/helper/intro
