@@ -10,7 +10,7 @@ Für die offizielle GNS3 TBZ Umgebung siehe [hier](https://gitlab.com/ch-tbz-it/
 
 ## Zugriff auf GNS3 Weboberfläche
 
-  http://${ADDR}:3080
+  [http://${ADDR}:3080](http://${ADDR}:3080)
   
 ## Links
 
