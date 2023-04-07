@@ -2,9 +2,7 @@
 #
 #	Installationsscript Modul 145 - Netzwerk betreiben und erweitern
 
-sudo add-apt-repository ppa:gns3/ppa -y
-sudo apt-update
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -q gns3-server gns3-gui
+cd /tmp
+curl https://raw.githubusercontent.com/GNS3/gns3-server/master/scripts/remote-install.sh > gns3-remote-install.sh
+sudo bash gns3-remote-install.sh --with-openvpn
 
-# Introseite (= README dieses Repository)
-bash -x /opt/lernmaas/helper/intro
