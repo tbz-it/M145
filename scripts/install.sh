@@ -15,6 +15,10 @@ sudo apt-get install -y genisoimage
 sudo wget -O /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
 sudo qemu-img resize /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img +6G
 
+# Templates anlegen
+curl -X POST "http://localhost:3080/v2/templates" -d '{"name": "Ubuntu-22", "compute_id": "local", "qemu_path": "/usr/bin/qemu-system-x86_64", "hda_disk_image": "jammy-server-cloudimg-amd64.img", "ram": 2048, "template_type": "qemu"}' 
+curl -X POST "http://localhost:3080/v2/templates" -d '{ "category": "guest", "compute_id": "local", "console_type": "vnc", "image": "gns3/webterm", "name": "webterm", "symbol": ":/symbols/docker_guest.svg", "template_type": "docker" }'
+
 # Netzwerk Bridge damit das Netzwerk schneller mit GNS3 funktioniert
 sudo apt-get install -y bridge-utils net-tools
 export ETH=$(ip link | awk -F: '$0 !~ "lo|vir|wl|tap|br|wg|docker0|^[^0-9]"{print $2;getline}')
