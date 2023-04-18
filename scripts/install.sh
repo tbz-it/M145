@@ -14,7 +14,7 @@ sudo usermod -aG gns3 ubuntu
 # Ubuntu Cloud-Image holen und aufbereiten u.a. fuer LernMAAS
 sudo apt-get install -y genisoimage
 sudo wget -O /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
-sudo qemu-img resize /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img +6G
+sudo qemu-img resize /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img +30G
 
 # Templates anlegen
 curl -X POST "http://localhost:3080/v2/templates" -d '{"name": "Ubuntu-22", "compute_id": "local", "qemu_path": "/usr/bin/qemu-system-x86_64", "hda_disk_image": "jammy-server-cloudimg-amd64.img", "ram": 2048, "template_type": "qemu"}' 
