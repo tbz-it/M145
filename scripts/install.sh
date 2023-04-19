@@ -21,6 +21,7 @@ curl -X POST "http://localhost:3080/v2/templates" -d '{"name": "Ubuntu-22", "com
 curl -X POST "http://localhost:3080/v2/templates" -d '{ "category": "guest", "compute_id": "local", "console_type": "vnc", "image": "gns3/webterm", "name": "webterm", "symbol": ":/symbols/docker_guest.svg", "template_type": "docker" }'
 curl -X POST "http://localhost:3080/v2/templates" -d '{ "category": "guest", "compute_id": "local", "console_type": "vnc", "image": "jess/chromium", "name": "chromium", "symbol": ":/symbols/docker_guest.svg", "template_type": "docker" }'
 curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/gns3/gns3-templates | bash -
+curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/gns3/gns3-webshop | bash -
 curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/gns3/gns3-microk8s | bash -
 
 # Netzwerk Bridge damit das Netzwerk schneller mit GNS3 funktioniert
