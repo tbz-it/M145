@@ -24,6 +24,9 @@ curl -X POST "http://localhost:3080/v2/templates" -d '{ "category": "guest", "co
 # WebShop Templates
 curl -sfL https://raw.githubusercontent.com/mc-b/gns3/master/scripts/gns3-webshop | bash -
 
+# Kubernetes Templates
+curl -sfL https://raw.githubusercontent.com/mc-b/gns3/master/scripts/gns3-microk8s | bash -
+
 # LernMAAS Template anlegen
 curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/scripts/gns3-templates | bash -
 
