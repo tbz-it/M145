@@ -8,6 +8,8 @@ Das ist nicht die offizielle GNS3 Umgebung der TBZ, sondern nur eine abgespekte 
 
 Für die offizielle GNS3 TBZ Umgebung siehe [hier](https://gitlab.com/ch-tbz-it/Stud/allgemein/tbzcloud-gns3).
 
+Für vorbereite Projeke siehe [hier](https://github.com/mc-b/lerngns3/tree/main/projects#gns3-projekte). Brauchen Nested Virtualization!
+
 ## Zugriff auf GNS3 Weboberfläche
 
   [http://${ADDR}:3080](http://${ADDR}:3080)
