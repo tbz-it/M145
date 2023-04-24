@@ -5,6 +5,11 @@
 # Introseite 
 bash -x /opt/lernmaas/helper/intro
 
+###
+# NGinx statt Apache Webserver
+sudo apt-get purge -y apache2
+sudo apt-get install -y nginx
+
 # GNS3 Labor
 cd /tmp
 curl https://raw.githubusercontent.com/GNS3/gns3-server/master/scripts/remote-install.sh > gns3-remote-install.sh
@@ -26,13 +31,16 @@ curl -X POST "http://localhost:3080/v2/templates" -d '{ "category": "guest", "co
 curl -X POST "http://localhost:3080/v2/templates" -d '{ "category": "guest", "compute_id": "local", "console_type": "vnc", "image": "jess/chromium", "name": "chromium", "symbol": ":/symbols/affinity/circle/gray/client.svg", "template_type": "docker" }'
 
 # WebShop Templates
-curl -sfL https://raw.githubusercontent.com/mc-b/gns3/master/scripts/gns3-webshop | bash -
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-webshop.sh | bash -
 
 # Kubernetes Templates
-curl -sfL https://raw.githubusercontent.com/mc-b/gns3/master/scripts/gns3-microk8s | bash -
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-microk8s.sh | bash -
 
-# LernMAAS Template anlegen
-curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/scripts/gns3-templates | bash -
+# LernMAAS Template (Services)
+curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/scripts/gns3-templates.sh | bash -
+
+# MAAS.io Template 
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-maas.sh | bash -
 
 # Netzwerk Bridge damit das Netzwerk schneller mit GNS3 funktioniert
 sudo apt-get install -y bridge-utils net-tools
