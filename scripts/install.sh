@@ -42,6 +42,9 @@ curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/scripts/gns3-te
 # MAAS.io Template 
 curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-maas.sh | bash -
 
+# TBZ Templates
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-tbz-templates.sh | bash -
+
 # Netzwerk Bridge damit das Netzwerk schneller mit GNS3 funktioniert
 sudo apt-get install -y bridge-utils net-tools
 export ETH=$(ip link | awk -F: '$0 !~ "lo|vir|wl|tap|br|wg|docker0|^[^0-9]"{print $2;getline}')
