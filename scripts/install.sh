@@ -13,7 +13,7 @@ sudo apt-get install -y nginx
 # GNS3 Labor
 cd /tmp
 curl https://raw.githubusercontent.com/GNS3/gns3-server/master/scripts/remote-install.sh > gns3-remote-install.sh
-sudo bash gns3-remote-install.sh
+sudo bash gns3-remote-install.sh --with-openvpn
 sudo usermod -aG gns3 ubuntu
 
 # Ubuntu Cloud-Image holen und aufbereiten u.a. fuer LernMAAS
