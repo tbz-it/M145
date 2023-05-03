@@ -26,7 +26,7 @@ sudo virt-customize -a /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img --r
 sudo virt-customize -a /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img --install qemu-guest-agent  
 
 # OpenWrt Image holen und aufbereiten
-sudo wget -O /opt/gns3/images/QEMU/openwrt-22.03.0-x86-64-generic-ext4-combined.img.gz https://downloads.openwrt.org/releases/22.03.0/targets/x86/64/openwrt-22.03.0-x86-64-generic-ext4-combined.img.gz
+sudo wget -q -O /opt/gns3/images/QEMU/openwrt-22.03.0-x86-64-generic-ext4-combined.img.gz https://downloads.openwrt.org/releases/22.03.0/targets/x86/64/openwrt-22.03.0-x86-64-generic-ext4-combined.img.gz
 sudo gunzip /opt/gns3/images/QEMU/openwrt-22.03.0-x86-64-generic-ext4-combined.img.gz
 
 # Templates anlegen
