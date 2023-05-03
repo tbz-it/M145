@@ -29,8 +29,3 @@ Für vorbereite Projeke siehe [hier](https://github.com/mc-b/lerngns3/tree/main/
 * [GNS3 Dokumentation](https://docs.gns3.com/docs/)
 * [GNS3 Appliances](https://gns3.com/marketplace/appliances)
 
-- - - 
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/ch/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/ch/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/ch/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 3.0 Schweiz Lizenz</a>.
-
-- - - 
