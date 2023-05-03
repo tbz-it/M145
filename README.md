@@ -12,7 +12,7 @@ Zwei lokale Netze, SNMP/VLAN fähige Netzwerkgeräte, WLAN Komponenten.
 
 Graphical Network Simulator-3 ist ein Netzwerk-Software-Emulator, der erstmals 2008 veröffentlicht wurde. Er ermöglicht die Kombination von virtuellen und realen Geräten, die zur Simulation komplexer Netzwerke verwendet werden.
 
-Das ist nicht die offizielle GNS3 Umgebung der TBZ, sondern nur eine abgespekte Variante um via Weboberfläche ein paar Layouts erzeugen zu können. Es fehlt IOU. OpenVPN funktioniert nur über WireGuard (d.h. zuerst WireGuard aktivieren, dann OpenVPN). 
+Das ist nicht die offizielle GNS3 Umgebung der TBZ, sondern nur eine abgespekte Variante um via Weboberfläche ein paar Layouts erzeugen zu können. Es fehlt IOU. OpenVPN funktioniert nur über WireGuard (d.h. zuerst WireGuard aktivieren, dann OpenVPN). Zugriffsinformationen für OpenVPN, siehe Tab ACCESSING.
 
 Für die offizielle GNS3 TBZ Umgebung siehe [hier](https://gitlab.com/ch-tbz-it/Stud/allgemein/tbzcloud-gns3).
 
