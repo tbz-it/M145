@@ -17,7 +17,7 @@ sudo bash gns3-remote-install.sh
 sudo usermod -aG gns3 ubuntu
 
 # Ubuntu Cloud-Image holen und aufbereiten u.a. fuer LernMAAS
-sudo apt-get install -y genisoimage
+sudo apt-get install -y genisoimage libguestfs-tools 
 sudo wget -q -O /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
 sudo qemu-img resize /opt/gns3/images/QEMU/jammy-server-cloudimg-amd64.img +30G
 # Floppy Disk Treiber raus, erzeugt X Fehlermeldungen
