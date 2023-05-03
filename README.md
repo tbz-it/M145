@@ -8,7 +8,7 @@ Performance und Verfügbarkeit eines Netzwerks überwachen und Ergebnisse interp
 
 Zwei lokale Netze, SNMP/VLAN fähige Netzwerkgeräte, WLAN Komponenten.
 
-### Infrastruktur
+### Infrastruktur (GNS3)
 
 Graphical Network Simulator-3 ist ein Netzwerk-Software-Emulator, der erstmals 2008 veröffentlicht wurde. Er ermöglicht die Kombination von virtuellen und realen Geräten, die zur Simulation komplexer Netzwerke verwendet werden.
 
@@ -18,7 +18,7 @@ Für die offizielle GNS3 TBZ Umgebung siehe [hier](https://gitlab.com/ch-tbz-it/
 
 Für vorbereite Projeke siehe [hier](https://github.com/mc-b/lerngns3/tree/main/projects#gns3-projekte). Brauchen Nested Virtualization!
 
-## Zugriff auf GNS3 Weboberfläche
+**Zugriff auf GNS3 Weboberfläche**
 
   [http://${ADDR}:3080](http://${ADDR}:3080)
   
