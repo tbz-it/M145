@@ -2,6 +2,12 @@
 #
 #	Installationsscript Modul 145 - Netzwerk betreiben und erweitern
 
+# Netzwerk Bridge mit eigenem DHCP Server
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-dhcp-server.sh | bash -
+# OpenVPN - braucht br0!, darum hinter DHCP Server
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/openvpn.sh | bash -
+sudo systemctl start openvpn
+
 # Introseite 
 bash -x /opt/lernmaas/helper/intro
 
@@ -15,6 +21,11 @@ cd /tmp
 curl https://raw.githubusercontent.com/GNS3/gns3-server/master/scripts/remote-install.sh > gns3-remote-install.sh
 sudo bash gns3-remote-install.sh
 sudo usermod -aG gns3 ubuntu
+
+# TBZ Templates
+curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-tbz-templates.sh | bash -
+
+### Erweiterungen nicht in Standard TBZ Umgebung drin!
 
 # Ubuntu Cloud-Image holen und aufbereiten u.a. fuer LernMAAS
 sudo apt-get install -y genisoimage libguestfs-tools 
@@ -45,33 +56,3 @@ curl -sfL https://raw.githubusercontent.com/mc-b/lernmaas/master/scripts/gns3-te
 
 # MAAS.io Template 
 curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-maas.sh | bash -
-
-# TBZ Templates
-curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/gns3-tbz-templates.sh | bash -
-
-# OpenVPN - braucht br0!, darum erst am Schluss starten
-curl -sfL https://raw.githubusercontent.com/mc-b/lerngns3/main/scripts/openvpn.sh | bash -
-
-# Netzwerk Bridge damit das Netzwerk schneller mit GNS3 funktioniert
-sudo apt-get install -y bridge-utils net-tools
-export ETH=$(ip link | awk -F: '$0 !~ "lo|vir|wl|tap|br|wg|docker0|^[^0-9]"{print $2;getline}')
-export ETH=$(echo $ETH | sed 's/ *$//g')
-
-cat <<EOF | sudo tee /etc/netplan/50-cloud-init.yaml
-network:
-    version: 2
-    ethernets:
-        ${ETH}:
-            dhcp4: false
-            dhcp6: false
-    bridges:
-      br0:
-       dhcp4: true
-       interfaces:
-         - ${ETH}
-EOF
-
-sudo sed -i -e 's/MACAddressPolicy=persistent/MACAddressPolicy=none/g' /usr/lib/systemd/network/99-default.link
-
-sudo netplan generate
-sudo netplan apply && sudo systemctl start openvpn
