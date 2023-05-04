@@ -18,6 +18,11 @@ Für die offizielle GNS3 TBZ Umgebung siehe [hier](https://gitlab.com/ch-tbz-it/
 
 Für vorbereite Projeke siehe [hier](https://github.com/mc-b/lerngns3/tree/main/projects#gns3-projekte). Brauchen Nested Virtualization!
 
+**Netzwerke**
+
+* 192.168.23.0/24 - Management Netzwerk ohne Verbindung ins Internet. GNS3 Device Cloud, Anschluss br0
+* 192.168.122.0/24 - NAT Anschluss mit Verbindungs ins Internet. GNS3 Device NAT.
+
 **Zugriff auf GNS3 Weboberfläche**
 
   [http://${ADDR}:3080](http://${ADDR}:3080)
