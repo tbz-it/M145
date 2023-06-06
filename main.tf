@@ -7,9 +7,9 @@ module "lerncloud" {
   
   module     = "m145"
   description = "Modul 145 Netzwerk betreiben und erweitern"
-  cores   = 2
-  memory  = 4
-  storage = 24   
+  cores   = 4
+  memory  = 8
+  storage = 64
     
   userdata    = "cloud-init.yaml"
 }
